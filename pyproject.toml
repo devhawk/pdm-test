@@ -5,7 +5,10 @@ description = "Default template for PDM package"
 authors = [
     {name = "Harry Pierson", email = "harry.pierson@dbos.dev"},
 ]
-dependencies = []
+dependencies = [
+    "dbos>=0.4.0a0",
+    "streamlit>=1.37.1",
+]
 requires-python = "==3.11.*"
 readme = "README.md"
 license = {text = "MIT"}
@@ -13,3 +16,9 @@ license = {text = "MIT"}
 
 [tool.pdm]
 distribution = false
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=24.8.0",
+    "isort>=5.13.2",
+]
